@@ -406,7 +406,7 @@ void DynaTest::add_dynamic_attributes()
 		INFO_STREAM << device_name << ":Adding " << attr_name << " Double RO dynamic attribute" << endl; 
 		try
 		{
-			add_DynDoubleRO_dynamic_attribute(attr_name);
+			add_DynDoubleRO_dynamic_attribute(attr_name, true);
 		}
 		catch(const Tango::DevFailed &e)
 		{
@@ -418,7 +418,7 @@ void DynaTest::add_dynamic_attributes()
 		INFO_STREAM << device_name << ":Adding " << attr_name << " Double RW dynamic attribute" << endl; 
 		try
 		{
-			add_DynDoubleRW_dynamic_attribute(attr_name);
+			add_DynDoubleRW_dynamic_attribute(attr_name, true);
 		}
 		catch(const Tango::DevFailed &e)
 		{
@@ -430,7 +430,7 @@ void DynaTest::add_dynamic_attributes()
 		INFO_STREAM << device_name << ":Adding " << attr_name << " Long RO dynamic attribute" << endl; 
 		try
 		{
-			add_DynLongRO_dynamic_attribute(attr_name);
+			add_DynLongRO_dynamic_attribute(attr_name, true);
 		}
 		catch(const Tango::DevFailed &e)
 		{
@@ -442,15 +442,15 @@ void DynaTest::add_dynamic_attributes()
 		INFO_STREAM << device_name << "Adding " << attr_name << " Long RW dynamic attribute" << endl; 
 		try
 		{
-			add_DynLongRW_dynamic_attribute(attr_name);
+			add_DynLongRW_dynamic_attribute(attr_name, true);
 		}
 		catch(const Tango::DevFailed &e)
 		{
 			Tango::Except::print_exception(e);
 		}
 	}
-	add_DynLongRO_dynamic_attribute("MyDynLongROAttribute");
-	add_DynLongRW_dynamic_attribute("MyDynLongRWAttribute");
+	add_DynLongRO_dynamic_attribute("MyDynLongROAttribute", false);
+	add_DynLongRW_dynamic_attribute("MyDynLongRWAttribute", false);
 	
 	/*----- PROTECTED REGION END -----*/	//	DynaTest::add_dynamic_attributes
 }

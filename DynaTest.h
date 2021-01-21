@@ -144,7 +144,7 @@ public:
 	 */
 	virtual void read_DynDoubleRO(Tango::Attribute &attr);
 	virtual bool is_DynDoubleRO_allowed(Tango::AttReqType type);
-	void add_DynDoubleRO_dynamic_attribute(string attname);
+	void add_DynDoubleRO_dynamic_attribute(string attname, bool devicelevel);
 	void remove_DynDoubleRO_dynamic_attribute(string attname);
 	Tango::DevDouble *get_DynDoubleRO_data_ptr(string &name);
 	map<string,Tango::DevDouble>	   DynDoubleRO_data;
@@ -159,7 +159,7 @@ public:
 	virtual void read_DynDoubleRW(Tango::Attribute &attr);
 	virtual void write_DynDoubleRW(Tango::WAttribute &attr);
 	virtual bool is_DynDoubleRW_allowed(Tango::AttReqType type);
-	void add_DynDoubleRW_dynamic_attribute(string attname);
+	void add_DynDoubleRW_dynamic_attribute(string attname, bool devicelevel);
 	void remove_DynDoubleRW_dynamic_attribute(string attname);
 	Tango::DevDouble *get_DynDoubleRW_data_ptr(string &name);
 	map<string,Tango::DevDouble>	   DynDoubleRW_data;
@@ -173,7 +173,7 @@ public:
 	 */
 	virtual void read_DynLongRO(Tango::Attribute &attr);
 	virtual bool is_DynLongRO_allowed(Tango::AttReqType type);
-	void add_DynLongRO_dynamic_attribute(string attname);
+	void add_DynLongRO_dynamic_attribute(string attname, bool devicelevel);
 	void remove_DynLongRO_dynamic_attribute(string attname);
 	Tango::DevLong *get_DynLongRO_data_ptr(string &name);
 	map<string,Tango::DevLong>	   DynLongRO_data;
@@ -188,7 +188,7 @@ public:
 	virtual void read_DynLongRW(Tango::Attribute &attr);
 	virtual void write_DynLongRW(Tango::WAttribute &attr);
 	virtual bool is_DynLongRW_allowed(Tango::AttReqType type);
-	void add_DynLongRW_dynamic_attribute(string attname);
+	void add_DynLongRW_dynamic_attribute(string attname, bool devicelevel);
 	void remove_DynLongRW_dynamic_attribute(string attname);
 	Tango::DevLong *get_DynLongRW_data_ptr(string &name);
 	map<string,Tango::DevLong>	   DynLongRW_data;

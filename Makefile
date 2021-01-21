@@ -56,7 +56,7 @@ OUTPUT_TYPE = DEVICE
 #   - for a device server, tango dependencies are automatically appended
 #   - '-I ../include' and '-I .' are automatically appended in all cases
 #
-INC_DIR_USER= -I . 
+INC_DIR_USER= -I /usr/local/include/tango
 
 #=============================================================================
 # LIB_DIR_USER is the list of user library directories

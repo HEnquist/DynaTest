@@ -67,7 +67,7 @@ namespace DynaTest_ns
  *  parameter attname: attribute name to be cretated and added.
  */
 //--------------------------------------------------------
-void DynaTest::add_DynDoubleRO_dynamic_attribute(string attname)
+void DynaTest::add_DynDoubleRO_dynamic_attribute(string attname, bool devicelevel)
 {
 	//	Attribute : DynDoubleRO
 	DynDoubleROAttrib	*dyndoublero = new DynDoubleROAttrib(attname);
@@ -96,7 +96,7 @@ void DynaTest::add_DynDoubleRO_dynamic_attribute(string attname)
 	dyndoublero->set_disp_level(Tango::OPERATOR);
 	//	Not Memorized
 	DynDoubleRO_data.insert(make_pair(attname, 0.0));
-	add_attribute(dyndoublero);
+	add_attribute(dyndoublero, devicelevel);
 }
 //--------------------------------------------------------
 /**
@@ -124,7 +124,7 @@ void DynaTest::remove_DynDoubleRO_dynamic_attribute(string attname)
  *  parameter attname: attribute name to be cretated and added.
  */
 //--------------------------------------------------------
-void DynaTest::add_DynDoubleRW_dynamic_attribute(string attname)
+void DynaTest::add_DynDoubleRW_dynamic_attribute(string attname, bool devicelevel)
 {
 	//	Attribute : DynDoubleRW
 	DynDoubleRWAttrib	*dyndoublerw = new DynDoubleRWAttrib(attname);
@@ -153,7 +153,7 @@ void DynaTest::add_DynDoubleRW_dynamic_attribute(string attname)
 	dyndoublerw->set_disp_level(Tango::OPERATOR);
 	//	Not Memorized
 	DynDoubleRW_data.insert(make_pair(attname, 0.0));
-	add_attribute(dyndoublerw);
+	add_attribute(dyndoublerw, devicelevel);
 }
 //--------------------------------------------------------
 /**
@@ -181,7 +181,7 @@ void DynaTest::remove_DynDoubleRW_dynamic_attribute(string attname)
  *  parameter attname: attribute name to be cretated and added.
  */
 //--------------------------------------------------------
-void DynaTest::add_DynLongRO_dynamic_attribute(string attname)
+void DynaTest::add_DynLongRO_dynamic_attribute(string attname, bool devicelevel)
 {
 	//	Attribute : DynLongRO
 	DynLongROAttrib	*dynlongro = new DynLongROAttrib(attname);
@@ -210,7 +210,7 @@ void DynaTest::add_DynLongRO_dynamic_attribute(string attname)
 	dynlongro->set_disp_level(Tango::OPERATOR);
 	//	Not Memorized
 	DynLongRO_data.insert(make_pair(attname, 0));
-	add_attribute(dynlongro);
+	add_attribute(dynlongro, devicelevel);
 }
 //--------------------------------------------------------
 /**
@@ -238,7 +238,7 @@ void DynaTest::remove_DynLongRO_dynamic_attribute(string attname)
  *  parameter attname: attribute name to be cretated and added.
  */
 //--------------------------------------------------------
-void DynaTest::add_DynLongRW_dynamic_attribute(string attname)
+void DynaTest::add_DynLongRW_dynamic_attribute(string attname, bool devicelevel)
 {
 	//	Attribute : DynLongRW
 	DynLongRWAttrib	*dynlongrw = new DynLongRWAttrib(attname);
@@ -267,7 +267,7 @@ void DynaTest::add_DynLongRW_dynamic_attribute(string attname)
 	dynlongrw->set_disp_level(Tango::OPERATOR);
 	//	Not Memorized
 	DynLongRW_data.insert(make_pair(attname, 0));
-	add_attribute(dynlongrw);
+	add_attribute(dynlongrw, devicelevel);
 }
 //--------------------------------------------------------
 /**
